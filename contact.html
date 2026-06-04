@@ -403,5 +403,33 @@ target="_blank">
 
 <script src="assets/js/script.js"></script>
 
+<script>
+function prepareWhatsApp() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    let text =
+`New EDUVANCE Contact Form
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Subject: ${subject}
+
+Message:
+${message}`;
+
+    let whatsapp =
+    "https://wa.me/918089991351?text=" +
+    encodeURIComponent(text);
+
+    document.getElementById("nextPage").value = whatsapp;
+}
+</script>
+
 </body>
 </html>
