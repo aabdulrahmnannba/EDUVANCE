@@ -100,27 +100,38 @@ Fill in your details to apply.
 
 <div class="feature-card">
 
-<form class="admission-form">
+<form class="admission-form"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdrg9-rA5i5ybirqJyvqZY5Lr7nqzy9RTQKB2-vyK1vNCUTVQ/formResponse"
+      method="POST"
+      target="hidden_iframe">
 
 <input type="text"
+name="entry.1927866467"
 placeholder="Student Name"
 required>
 
 <input type="text"
+name="entry.1652773111"
 placeholder="Parent / Guardian Name"
 required>
 
 <input type="tel"
+name="entry.166840574"
+placeholder="Parent Number"
+required>
+
+<input type="tel"
+name="entry.475183528"
 placeholder="Phone Number"
 required>
 
 <input type="email"
-placeholder="Email Address">
+name="entry.2145395281"
+placeholder="Email Address"
+required>
 
-<select required>
-
-<option>Select Class</option>
-
+<select name="entry.1589337820" required>
+<option value="">Select Class</option>
 <option>5th Standard</option>
 <option>6th Standard</option>
 <option>7th Standard</option>
@@ -129,42 +140,34 @@ placeholder="Email Address">
 <option>10th Standard</option>
 <option>Plus One (+1)</option>
 <option>Plus Two (+2)</option>
-
 </select>
 
-<select>
-
-<option>Select Stream</option>
-
+<select name="entry.165220976" required>
+<option value="">Select Stream</option>
 <option>Science</option>
 <option>Commerce</option>
 <option>Humanities</option>
-
 </select>
 
-<select>
-
-<option>Select Syllabus</option>
-
-<option>State</option>
+<select name="entry.374507904" required>
+<option value="">Select Syllabus</option>
+<option>STATE</option>
 <option>CBSE</option>
-
 </select>
 
 <textarea
+name="entry.1911832626"
 rows="5"
-placeholder="Address">
-</textarea>
+placeholder="Address"
+required></textarea>
 
-<button
-type="submit"
-class="btn-primary">
-
+<button type="submit" class="btn-primary">
 Submit Application
-
 </button>
 
 </form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 
 </div>
 
@@ -318,6 +321,27 @@ Inspire • Educate • Empower
 </footer>
 
 <script src="assets/js/script.js"></script>
+
+<script>
+document.querySelector('.admission-form').addEventListener('submit', function() {
+
+setTimeout(function() {
+
+document.getElementById("successPopup").style.display = "block";
+
+document.querySelector(".admission-form").reset();
+
+window.location.href = "thank-you.html";
+
+window.open(
+"https://wa.me/918089991351?text=I have submitted my EDUVANCE admission application.",
+"_blank"
+);
+
+}, 1500);
+
+});
+</script>
 
 </body>
 </html>
