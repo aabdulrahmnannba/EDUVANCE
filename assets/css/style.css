@@ -1,0 +1,1042 @@
+/* ==========================
+   EDUVANCE PREMIUM v2.0
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+
+--bg:#ffffff;
+--text:#111111;
+--card:#f5f5f5;
+--border:#e5e5e5;
+
+--primary:#000000;
+--secondary:#ffffff;
+
+--glass:rgba(255,255,255,0.7);
+
+}
+
+body.dark{
+
+--bg:#000000;
+--text:#ffffff;
+--card:#111111;
+--border:#222222;
+
+--primary:#ffffff;
+--secondary:#000000;
+
+--glass:rgba(15,15,15,0.7);
+
+}
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+transition:0.4s;
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.loader-content{
+text-align:center;
+color:white;
+}
+
+.loader-content img{
+width:120px;
+margin-bottom:20px;
+}
+
+.loader-content h2{
+font-size:2rem;
+font-weight:800;
+}
+
+.loader-content p{
+opacity:.8;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+backdrop-filter:blur(20px);
+
+background:var(--glass);
+
+border-bottom:1px solid var(--border);
+
+z-index:1000;
+}
+
+.nav-left{
+
+align-items:center;
+gap:15px;
+}
+
+.nav-logo{
+width:60px;
+height:60px;
+object-fit:contain;
+border-radius:50%;
+}
+
+.nav-left h2{
+font-size:32px;
+font-weight:800;
+margin:0;
+line-height:1;
+}
+
+.nav-left span{
+font-size:16px;
+color:#666;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+opacity:.6;
+}
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+#theme-toggle{
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+cursor:pointer;
+background:var(--card);
+color:var(--text);
+font-size:1rem;
+}
+
+.nav-btn{
+text-decoration:none;
+padding:12px 24px;
+background:var(--primary);
+color:var(--secondary);
+border-radius:50px;
+font-weight:600;
+}
+
+.menu-btn{
+display:none;
+font-size:1.5rem;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
+url('../images/hero.jpg');
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+max-width:900px;
+padding:20px;
+}
+
+.hero-logo{
+width:280px;
+max-width:80%;
+margin-bottom:30px;
+}
+
+.hero h1{
+font-size:7rem;
+font-weight:900;
+letter-spacing:3px;
+}
+
+.hero h1 span{
+display:block;
+font-size:2rem;
+font-weight:400;
+margin-top:15px;
+}
+
+.hero p{
+margin-top:30px;
+font-size:1.2rem;
+letter-spacing:4px;
+}
+
+.hero-buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+display:inline-block;
+padding:14px 30px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
+}
+
+.btn-secondary{
+display:inline-block;
+padding:14px 30px;
+border:2px solid white;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
+}
+
+/* ==========================
+   SECTION TITLES
+========================== */
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:3rem;
+font-weight:800;
+margin-bottom:15px;
+margin-top: 30px;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+opacity:.7;
+line-height:1.8;
+}
+
+/* ==========================
+   STATS SECTION
+========================== */
+
+.stats-section{
+padding:120px 8%;
+}
+
+.stats-container{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.stat-card{
+background:var(--card);
+border:1px solid var(--border);
+padding:40px;
+border-radius:25px;
+text-align:center;
+transition:.4s;
+}
+
+.stat-card:hover{
+transform:translateY(-10px);
+}
+
+.stat-card h3{
+font-size:3rem;
+font-weight:900;
+margin-bottom:10px;
+}
+
+.stat-card p{
+opacity:.7;
+}
+
+/* ==========================
+   WHY EDUVANCE
+========================== */
+
+.why-eduvance{
+padding:120px 8%;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.feature-card{
+background:var(--card);
+border:1px solid var(--border);
+padding:40px;
+border-radius:25px;
+transition:.4s;
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+.feature-card i{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.feature-card h3{
+margin-bottom:15px;
+font-size:1.3rem;
+}
+
+.feature-card p{
+opacity:.8;
+line-height:1.8;
+}
+
+/* ==========================
+   COURSES
+========================== */
+
+.courses-showcase{
+padding:120px 8%;
+}
+
+.course-banner{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+margin-bottom:120px;
+}
+
+.course-banner.reverse{
+direction:rtl;
+}
+
+.course-banner.reverse .course-content{
+direction:ltr;
+}
+
+.course-image img{
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:30px;
+}
+
+.course-content h2{
+font-size:3rem;
+margin-bottom:20px;
+font-weight:800;
+}
+
+.course-content p{
+line-height:1.9;
+opacity:.8;
+margin-bottom:25px;
+}
+
+.course-tags{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:30px;
+}
+
+.course-tags span{
+padding:10px 18px;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:50px;
+}
+
+/* ==========================
+   ACHIEVEMENTS
+========================== */
+
+.achievement-section{
+padding:120px 8%;
+}
+
+.achievement-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.achievement-card{
+background:var(--card);
+border:1px solid var(--border);
+padding:50px;
+border-radius:25px;
+text-align:center;
+transition:.4s;
+}
+
+.achievement-card:hover{
+transform:translateY(-10px);
+}
+
+.achievement-card h3{
+margin-bottom:15px;
+font-size:1.5rem;
+}
+
+.achievement-card p{
+opacity:.8;
+line-height:1.8;
+}
+
+/* ==========================
+   HOVER EFFECTS
+========================== */
+
+.feature-card,
+.stat-card,
+.achievement-card,
+.course-image img{
+transition:all .4s ease;
+}
+
+.course-image img:hover{
+transform:scale(1.03);
+}
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+
+.testimonials-section{
+padding:120px 8%;
+}
+
+.testimonial-slider{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.testimonial-card{
+background:var(--card);
+border:1px solid var(--border);
+padding:40px;
+border-radius:25px;
+transition:.4s;
+}
+
+.testimonial-card:hover{
+transform:translateY(-10px);
+}
+
+.testimonial-card p{
+line-height:1.9;
+margin-bottom:20px;
+opacity:.8;
+}
+
+.testimonial-card h4{
+font-size:1rem;
+font-weight:700;
+}
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery-preview{
+padding:120px 8%;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+cursor:pointer;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+.gallery-btn{
+text-align:center;
+margin-top:40px;
+}
+
+/* ==========================
+   ADMISSION CTA
+========================== */
+
+.admission-cta{
+padding:120px 8%;
+}
+
+.cta-content{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:30px;
+padding:80px;
+text-align:center;
+}
+
+.cta-content h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.cta-content p{
+max-width:700px;
+margin:auto;
+opacity:.8;
+line-height:1.8;
+}
+
+.cta-buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+padding:80px 8% 20px;
+background:var(--card);
+border-top:1px solid var(--border);
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:50px;
+}
+
+.footer-brand img{
+width:80px;
+margin-bottom:20px;
+}
+
+.footer-brand h3{
+margin-bottom:10px;
+}
+
+.footer-brand p{
+opacity:.7;
+}
+
+.footer-links ul{
+list-style:none;
+}
+
+.footer-links li{
+margin-bottom:12px;
+}
+
+.footer-links a{
+text-decoration:none;
+color:var(--text);
+opacity:.8;
+}
+
+.footer-contact p{
+margin-bottom:10px;
+opacity:.8;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:50px;
+padding-top:20px;
+border-top:1px solid var(--border);
+opacity:.7;
+}
+
+/* ==========================
+   WHATSAPP
+========================== */
+
+.whatsapp-btn{
+position:fixed;
+right:25px;
+bottom:25px;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+background:#25D366;
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:1.8rem;
+
+text-decoration:none;
+
+z-index:999;
+}
+
+/* ==========================
+   BACK TO TOP
+========================== */
+
+#backToTop{
+position:fixed;
+
+left:25px;
+bottom:25px;
+
+width:55px;
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:var(--primary);
+color:var(--secondary);
+
+cursor:pointer;
+
+font-size:1rem;
+
+z-index:999;
+}
+
+/* ==========================
+   MOBILE MENU
+========================== */
+
+@media(max-width:992px){
+
+.nav-links{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero h1{
+font-size:3.5rem;
+}
+
+.course-banner{
+grid-template-columns:1fr;
+}
+
+.course-banner.reverse{
+direction:ltr;
+}
+
+.stats-container,
+.why-grid,
+.achievement-grid,
+.testimonial-slider{
+grid-template-columns:1fr 1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.footer-container{
+grid-template-columns:1fr;
+}
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+padding:120px 20px;
+}
+
+.hero-logo{
+width:90px;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.hero h1 span{
+font-size:1rem;
+}
+
+.hero p{
+font-size:.9rem;
+letter-spacing:2px;
+}
+
+.section-title h2{
+font-size:2rem;
+}
+
+.stats-container,
+.why-grid,
+.achievement-grid,
+.testimonial-slider{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.course-image img{
+height:280px;
+}
+
+.cta-content{
+padding:40px 25px;
+}
+
+.cta-content h2{
+font-size:2rem;
+}
+
+.navbar{
+padding:15px 5%;
+}
+
+.whatsapp-btn{
+width:55px;
+height:55px;
+font-size:1.5rem;
+}
+
+#backToTop{
+width:50px;
+height:50px;
+}
+
+}
+
+/* SCROLL ANIMATION */
+
+.feature-card,
+.stat-card,
+.achievement-card,
+.testimonial-card{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+.feature-card.show,
+.stat-card.show,
+.achievement-card.show,
+.testimonial-card.show{
+
+opacity:1;
+transform:translateY(0);
+transition:.8s;
+
+}
+
+/* MOBILE NAVIGATION */
+
+@media(max-width:992px){
+
+.nav-links.active{
+
+display:flex;
+
+position:absolute;
+
+top:80px;
+left:0;
+
+width:100%;
+
+background:var(--bg);
+
+flex-direction:column;
+
+padding:30px;
+
+text-align:center;
+
+border-bottom:1px solid var(--border);
+
+}
+
+}
+
+/* BACK TO TOP */
+
+#backToTop{
+display:none;
+}
+
+.faculty-img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+/* GALLERY FILTER */
+
+.filter-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:30px;
+margin-bottom:30px;
+}
+
+.filter-btn{
+padding:12px 25px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:var(--card);
+color:var(--text);
+border:1px solid var(--border);
+}
+
+.filter-btn.active{
+background:var(--primary);
+color:var(--secondary);
+}
+
+/* LIGHTBOX */
+
+#lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:rgba(0,0,0,.95);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+}
+
+#lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+#closeLightbox{
+position:absolute;
+top:30px;
+right:40px;
+font-size:3rem;
+color:white;
+cursor:pointer;
+}
+
+.admission-form{
+max-width:1200px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.admission-form label{
+font-weight:600;
+margin-bottom:5px;
+display:block;
+text-align:center;
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea{
+
+width:100%;
+padding:15px 20px;
+
+border:1px solid #dcdcdc;
+border-radius:8px;
+
+font-size:16px;
+background:#fff;
+
+outline:none;
+transition:0.3s;
+
+}
+
+.admission-form input:focus,
+.admission-form select:focus,
+.admission-form textarea:focus{
+
+border-color:#000;
+
+}
+
+.admission-form button{
+
+width:250px;
+margin:20px auto 0;
+
+padding:15px;
+
+border:none;
+border-radius:50px;
+
+background:#000;
+color:#fff;
+
+font-size:16px;
+font-weight:600;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.admission-form button:hover{
+
+transform:translateY(-3px);
+
+}
+
+#successPopup{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:var(--card);
+padding:40px;
+border-radius:20px;
+text-align:center;
+z-index:99999;
+border:1px solid var(--border);
+}
+
+.qr-image{
+width:250px;
+max-width:100%;
+border-radius:20px;
+}
+
+@media(max-width:768px){
+
+.nav-logo{
+width:40px;
+height:40px;
+}
+
+.nav-left h2{
+font-size:18px;
+}
+
+.nav-left span{
+font-size:12px;
+}
+
+}
