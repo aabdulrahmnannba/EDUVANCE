@@ -1050,3 +1050,17 @@ font-size:12px;
 .achievement-card:hover{
     transform:translateY(-8px);
 }
+
+.section-title h2{
+    color: #111;
+    text-decoration: none;
+}
+
+.admission-form label{
+    display: block;
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
