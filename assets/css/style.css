@@ -1041,3 +1041,12 @@ font-size:12px;
 }
 
 }
+
+.achievement-card{
+    text-decoration:none;
+    color:inherit;
+}
+
+.achievement-card:hover{
+    transform:translateY(-8px);
+}
