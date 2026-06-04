@@ -164,26 +164,43 @@ Malappuram, Kerala
 
 <div class="feature-card">
 
-<form class="admission-form">
+<form class="admission-form"
+      action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
+      method="POST"
+      onsubmit="prepareWhatsApp()">
 
-<label>Full Name</label>
-<input type="text" placeholder="Enter Full Name">
+    <input type="hidden" name="_captcha" value="false">
 
-<label>Email Address</label>
-<input type="email" placeholder="example@email.com">
+    <input type="hidden"
+           name="_next"
+           id="nextPage">
 
-<label>Phone Number</label>
-<input type="tel" placeholder="80899 91351">
+    <label>Full Name</label>
+    <input type="text" id="name" name="Full Name"
+           placeholder="Enter Full Name" required>
 
-<label>Subject</label>
-<input type="text" placeholder="Subject">
+    <label>Email Address</label>
+    <input type="email" id="email" name="Email"
+           placeholder="example@email.com" required>
 
-<label>Your Message</label>
-<textarea rows="5" placeholder="Type your message"></textarea>
+    <label>Phone Number</label>
+    <input type="tel" id="phone" name="Phone Number"
+           placeholder="80899 91351" required>
 
-<button type="submit">
-Send Message
-</button>
+    <label>Subject</label>
+    <input type="text" id="subject" name="Subject"
+           placeholder="Subject" required>
+
+    <label>Your Message</label>
+    <textarea id="message"
+              name="Message"
+              rows="5"
+              placeholder="Type your message"
+              required></textarea>
+
+    <button type="submit">
+        Send Message
+    </button>
 
 </form>
 
