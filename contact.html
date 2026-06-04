@@ -25,7 +25,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <div class="nav-left">
 
 
-
 <h2>EDUVANCE</h2>
 <span>Learning Centre</span>
 
@@ -162,7 +161,8 @@ Malappuram, Kerala
 
 <form class="admission-form"
       action="https://formsubmit.co/bathiihhh@gmail.com"
-      method="POST">
+      method="POST"
+      id="contactForm">
 
     <!-- FormSubmit Settings -->
     <input type="hidden" name="_captcha" value="false">
@@ -175,45 +175,51 @@ Malappuram, Kerala
            name="_next"
            value="https://aabdulrahmannba.github.io/EDUVANCE/contact.html">
 
-    <!-- Full Name -->
-    <label>Full Name</label>
-    <input type="text"
-           name="Name"
-           placeholder="Enter Full Name"
-           required>
 
-    <!-- Email -->
-    <label>Email Address</label>
-    <input type="email"
-           name="Email"
-           placeholder="example@email.com"
-           required>
+<!-- Full Name -->
+<label>Full Name</label>
+<input type="text"
+       id="name"
+       name="Name"
+       placeholder="Enter Full Name"
+       required>
 
-    <!-- Phone -->
-    <label>Phone Number</label>
-    <input type="tel"
-           name="Phone"
-           placeholder="80899 91351"
-           required>
+<!-- Email -->
+<label>Email Address</label>
+<input type="email"
+       id="email"
+       name="Email"
+       placeholder="example@email.com"
+       required>
 
-    <!-- Subject -->
-    <label>Subject</label>
-    <input type="text"
-           name="Subject"
-           placeholder="Subject"
-           required>
+<!-- Phone -->
+<label>Phone Number</label>
+<input type="tel"
+       id="phone"
+       name="Phone"
+       placeholder="80899 91351"
+       required>
 
-    <!-- Message -->
-    <label>Your Message</label>
-    <textarea name="Message"
-              rows="5"
-              placeholder="Type your message"
-              required></textarea>
+<!-- Subject -->
+<label>Subject</label>
+<input type="text"
+       id="subject"
+       name="Subject"
+       placeholder="Subject"
+       required>
 
-    <!-- Submit Button -->
-    <button type="submit">
-        Send Message
-    </button>
+<!-- Message -->
+<label>Your Message</label>
+<textarea id="message"
+          name="Message"
+          rows="5"
+          placeholder="Type your message"
+          required></textarea>
+
+<!-- Submit Button -->
+<button type="submit">
+    Send Message
+</button>
 
 </form>
 
@@ -416,7 +422,38 @@ target="_blank">
 
 <script src="assets/js/script.js"></script>
 
+<script>
+document.getElementById("contactForm").addEventListener("submit", function() {
 
+setTimeout(function() {
+
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+const subject = document.getElementById("subject").value;
+const message = document.getElementById("message").value;
+
+const whatsappMessage =
+`New Contact Form Message
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Subject: ${subject}
+
+Message:
+${message}`;
+
+window.open(
+"https://wa.me/918089991351?text=" +
+encodeURIComponent(whatsappMessage),
+"_blank"
+);
+
+}, 1500);
+
+});
+</script>
 
 </body>
 </html>
