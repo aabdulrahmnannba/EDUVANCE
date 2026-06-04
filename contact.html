@@ -119,6 +119,9 @@ fee details and academic guidance.
 
 <i class="fab fa-whatsapp"></i>
 
+<a href="https://wa.me/918089991351"
+target="_blank"</a>    
+
 <h3>WhatsApp</h3>
 
 <p>
@@ -152,38 +155,49 @@ Kasaragod, Kerala
 
 <section class="stats-section">
 
-<div class="section-title">
+    <div class="section-title">
+        <h2>Send a Message</h2>
+    </div>
 
-<h2>Send a Message</h2>
+    <div class="feature-card">
 
-</div>
+        <form class="admission-form"
+              action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
+              method="POST">
 
-<div class="feature-card">
+            <!-- Optional Settings -->
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <input type="hidden" name="_captcha" value="false">
 
-<form class="admission-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="Name"
+                   placeholder="Enter Full Name" required>
 
-<label>Full Name</label>
-<input type="text" placeholder="Enter Full Name">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="Email"
+                   placeholder="Enter Your E-mail" required>
 
-<label>Email Address</label>
-<input type="email" placeholder="Enter Your E-mail">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone"
+                   placeholder="Enter Your Number" required>
 
-<label>Phone Number</label>
-<input type="tel" placeholder="Enter Your Number">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject"
+                   placeholder="Enter Subject" required>
 
-<label>Subject</label>
-<input type="text" placeholder="Enter Subject">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="Message"
+                      rows="5"
+                      placeholder="Type your message"
+                      required></textarea>
 
-<label>Your Message</label>
-<textarea rows="5" placeholder="Type your message"></textarea>
+            <button type="submit">
+                Send Message
+            </button>
 
-<button type="submit">
-Send Message
-</button>
+        </form>
 
-</form>
-
-</div>
+    </div>
 
 </section>
 
